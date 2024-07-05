@@ -65,5 +65,12 @@ Our project is built with a modern and robust tech stack to ensure high performa
      Download and Install PostgreSQL https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
      Setup username and password
      Create new Database by right clicking on server. name it as Deep_Tree.
-     
+     Create new Table users using following command
+     CREATE TABLE users (
+     id SERIAL PRIMARY KEY,
+     first_name VARCHAR(10) NOT NULL,
+     last_name VARCHAR(10) NOT NULL,
+     username VARCHAR(255) UNIQUE NOT NULL,
+     password_hash TEXT NOT NULL
+     );
      ```
