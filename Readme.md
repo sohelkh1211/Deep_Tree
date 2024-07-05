@@ -7,8 +7,8 @@ Experience the beauty and complexity of data structures with our Deep Tree Visua
 Our project is built with a modern and robust tech stack to ensure high performance and scalability:
 
 - **Frontend:**
-  - [ReactJS](https://reactjs.org/) + [Vite](https://vitejs.dev/)
-  - [Tailwind CSS](https://tailwindcss.com/)
+  - [ReactJS](https://reactjs.org/) + [Vite](https://vitejs.dev/) 
+  - [Tailwind CSS](https://tailwindcss.com/) 
 - **Backend:**
   - [Node.js](https://nodejs.org/)
   - [Express.js](https://expressjs.com/)
@@ -33,6 +33,9 @@ Our project is built with a modern and robust tech stack to ensure high performa
 <img width="300px" rounded="10px" src="https://github.com/sohelkh1211/Deep_Tree/assets/125993375/532b4c7a-508d-48b2-82af-c02056748f49" /> <br />
 - PostgreSQL <br /><br />
 <img width="300px"  rounded="10px" src="https://github.com/sohelkh1211/Deep_Tree/assets/125993375/8f471e8a-216f-4ced-b37f-07960a6bfdf1" /> <br />
+- Tree.jsx <br /><br />
+<img width="800px"  rounded="10px" src="https://github.com/sohelkh1211/Deep_Tree/assets/125993375/207e7f99-2025-424d-a134-e14f07b13664" /> <br />
+
 
 ## 📚 Getting Started
 
