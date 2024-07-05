@@ -98,3 +98,7 @@ Our project is built with a modern and robust tech stack to ensure high performa
      ```sh
      npm run dev
      ```
+     
+3. Open your browser and navigate to `http://localhost:5173` to see the application in action.
+
+# Thank you 😊 for checking out Deep Tree Repository!
