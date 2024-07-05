@@ -28,9 +28,11 @@ Our project is built with a modern and robust tech stack to ensure high performa
 ## 📸 Screenshots
 
 - Login.jsx <br /> <br />
-<img width="300px" style="border-radius: 10px;" src="https://github.com/sohelkh1211/Deep_Tree/assets/125993375/e5655c2e-13e9-4c48-9a0b-a24badb95882" /> <br />
+<img width="300px" src="https://github.com/sohelkh1211/Deep_Tree/assets/125993375/e5655c2e-13e9-4c48-9a0b-a24badb95882" /> <br />
 - Register.jsx <br /><br />
 <img width="300px" rounded="10px" src="https://github.com/sohelkh1211/Deep_Tree/assets/125993375/532b4c7a-508d-48b2-82af-c02056748f49" /> <br />
+- PostgreSQL <br /><br />
+<img width="300px"  rounded="10px" src="https://github.com/sohelkh1211/Deep_Tree/assets/125993375/8f471e8a-216f-4ced-b37f-07960a6bfdf1" /> <br />
 
 ## 📚 Getting Started
 
@@ -66,6 +68,8 @@ Our project is built with a modern and robust tech stack to ensure high performa
      Setup username and password
      Create new Database by right clicking on server. name it as Deep_Tree.
      Create new Table users using following command
+     ```
+     ```sh
      CREATE TABLE users (
      id SERIAL PRIMARY KEY,
      first_name VARCHAR(10) NOT NULL,
@@ -73,4 +77,24 @@ Our project is built with a modern and robust tech stack to ensure high performa
      username VARCHAR(255) UNIQUE NOT NULL,
      password_hash TEXT NOT NULL
      );
+     ```
+5. Install dependencies for the backend:
+   
+   ```sh
+   cd backend
+   npm install
+   ```
+   
+### Running the Application
+  
+  1. Start the backend server:
+  
+     ```sh
+     node index.js
+     ```
+  
+  2. Start the frontend development server:
+  
+     ```sh
+     npm run dev
      ```
