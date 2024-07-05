@@ -28,7 +28,7 @@ export const useLocalStorage = (keyName, defaultValue) => {
   };
 
 const Provider = ({ children }) => {
-    const [user, setUser] = useState("user", null);
+    const [user, setUser] = useLocalStorage("user", null);
     const [data, setData] = useState({
       first_name: "",
       last_name: "",

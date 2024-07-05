@@ -1,10 +1,13 @@
 import { useContext, useState } from "react";
 import { GlobalContext } from "../Provider";
+// Icons import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   const { data, setData } = useContext(GlobalContext);
   const [pwd, setPwd] = useState({
     password: '',
@@ -28,18 +31,41 @@ const Register = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!data.first_name || !data.last_name || !data.email || !pwd.password || !pwd.confirm_password) {
       toast.error("Fill all the fields");
       return;
     }
-    else if (pwd.password !== pwd.confirm_password) {
-      alert("Passwords do not match");
+    if (pwd.password !== pwd.confirm_password) {
+      toast.error("Passwords do not match");
       return;
     }
 
-  }
+    const res = await fetch('http://localhost:3000/api/auth/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        "username": data.email,
+        "password": pwd.password,
+        "first_name": data.first_name,
+        "last_name": data.last_name
+      })
+    });
+
+    if (res.status === 201) {
+      toast.success("Registration successful!");
+      navigate("/");
+    } else if (res.status === 409 || res.status === 400) {
+      const errorData = await res.json();
+      toast.error(errorData.error);
+    } else {
+      toast.error("An error occurred. Please try again.");
+    }
+  };
+
 
 
   return (

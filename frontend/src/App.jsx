@@ -5,19 +5,18 @@ import './App.css';
 import Provider from './Provider';
 import Login from './components/Login';
 import Register from './components/Register';
+import VisualizationTree from './components/VisualizationTree';
 import { Toaster } from 'react-hot-toast';
-import { Price } from './components';
-
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
       <Toaster toastOptions={{
         className: 'font-bold border-[2px] wittgenstein-login',
         success: {
-          duration: 3000,
+          duration: 2500,
           iconTheme: {
             primary: 'green',
             secondary: 'black',
@@ -28,7 +27,7 @@ function App() {
           },
         },
         error: {
-          duration: 1500,
+          duration: 2500,
           iconTheme: {
             primary: '#ff4b4b',
             secondary: '#FFFAEE'
@@ -43,6 +42,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Provider><Login /></Provider>} />
         <Route path='/register' element={<Provider><Register /></Provider>} />
+        <Route element={<Provider><ProtectedRoute /></Provider>}>
+          <Route path='/tree' element={<Provider><VisualizationTree /></Provider>} />
+        </Route>
         {/* <Route path='/price' element={<Price />} /> */}
       </Routes>
     </BrowserRouter>

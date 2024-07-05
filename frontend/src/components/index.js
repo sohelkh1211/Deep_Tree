@@ -5,5 +5,5 @@ import Price from "./Price.jsx";
 export {
     Login,
     Register,
-    Price
+    Price,
 }
